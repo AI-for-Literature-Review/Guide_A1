@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1 Introduction to AI Tools for Literature Review &#8212; AI for Literature Review</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'part2/selecting-ai-tool';</script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2 Defining Your Topic and Research Questions" href="defining-topic.html" />
+    <link rel="prev" title="Summary Part 1: Effective and Responsible GenAI Use" href="../part1/evaluating-output.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../about.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">AI for Literature Review</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">What is GenAI</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../part1/what-is-genai.html">What is Generative AI?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../part1/prompts.html">Prompt Engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../part1/evaluating-output.html">Summary Part 1: Effective and Responsible GenAI Use</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AI Tools for Lit Review</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1 Introduction to AI Tools for Literature Review</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="defining-topic.html">2 Defining Your Topic and Research Questions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="brainstorming.html">Brainstorming on Your Topic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploring-literature.html">Exploring Academic Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop-question.html">Developing Your Research Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="search-select.html">3 Searching and Selecting Sources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="keyword-search.html">Keyword Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="find-additional.html">Finding Additional Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evaluate-selection.html">Evaluating and Selecting Sources</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analyze-literature.html">4 Analysing Selected Sources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="analyze-literature-reading-summarising.html">Reading and Summarising Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analyze-literature-synthesising.html">Synthesising Findings</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="write-cite.html">5 Writing Your Text and Citing Sources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="draft.html">Drafting Your Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revising.html">Revising and Editing Your Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cite-references.html">Citing Sources</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/part2/selecting-ai-tool.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1 Introduction to AI Tools for Literature Review</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-literature-review-process">Introduction to the Literature Review Process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-tools-for-literature-review">Different Tools for Literature Review</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-reasoning-models">Deep Reasoning Models</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-choose-your-ai-tool">How to Choose Your AI Tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-ai-tools-for-literature-review">
+<h1>1 Introduction to AI Tools for Literature Review<a class="headerlink" href="#introduction-to-ai-tools-for-literature-review" title="Link to this heading">#</a></h1>
+<section id="introduction-to-the-literature-review-process">
+<h2>Introduction to the Literature Review Process<a class="headerlink" href="#introduction-to-the-literature-review-process" title="Link to this heading">#</a></h2>
+<p>During the literature review process, there are multiple steps where you will work with information. There are four phases in the literature review:</p>
+<p><img alt="Overview of the Literature Review process" src="../_images/overview-lit-review.png" /></p>
+<ol class="arabic simple">
+<li><p>Defining your topic and research questions</p></li>
+<li><p>Searching and selecting sources</p></li>
+<li><p>Analysing selected sources</p></li>
+<li><p>Writing your text and citing sources</p></li>
+</ol>
+<p>For each of these steps, AI tools can support the process. To be able to effectively use these tools, it is important to understand three types of GenAI tools:</p>
+<ul class="simple">
+<li><p>General tools</p></li>
+<li><p>Academic search tools</p></li>
+<li><p>Local-input tools</p></li>
+</ul>
+<p>Knowing a bit more about how these tools are trained and what sources they use will make you more effective in using AI for literature review. So let’s dive into this topic:</p>
+</section>
+<section id="different-tools-for-literature-review">
+<h2>Different Tools for Literature Review<a class="headerlink" href="#different-tools-for-literature-review" title="Link to this heading">#</a></h2>
+<p>GenAI tools differ in the sources they draw from. <strong>General AI tools</strong> like Copilot, ChatGPT or Claude search, or are trained on sources from the open web. They are designed to help with general questions. It can also happen that the sources they provide are fake.</p>
+<p><strong>Academic AI tools</strong>, on the other hand, draw from academic sources, often from <a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a>. They are developed specifically to assist in the process of doing research. For example, they can assist in finding relevant peer-reviewed articles by searching directly (for example through agent-based or semantic searching), or by finding new articles based on initial seed papers (literature mapping). They can also help summarise main topics in a specific research field.</p>
+<p><strong>Local-input tools</strong>, like NotebookLM, ChatPDF and ASReview allow you to work on specific documents you upload to a server, or host locally. They work well when you have specific sources you want to study, and summarise specific information and extract the details. You can also upload specific documents to a general tool for analysis, but because they draw from their extensive knowledge base, the output the model provides can be less specific. In a tool that is designed to work with the sources you put in, you often have more control over the output.</p>
+<p>Depending on which task you need to perform for a literature review, you might need to use a general tool, focus on a more specific academic tool or use a local-input tool. In this guide we will discuss all three types of models throughout. Our goal is that you know for each of the phases how an AI tool could assist you in the process, and that you are able to select a relevant tool to work with.</p>
+<p>Some tools combine multiple types of AI in one. For example, Elicit offers both the option to search academic literature, and subsequently allows you to analyse the documents you select, working like a local-input tool.</p>
+<section id="deep-reasoning-models">
+<h3>Deep Reasoning Models<a class="headerlink" href="#deep-reasoning-models" title="Link to this heading">#</a></h3>
+<p>In all three types of tools you can often switch the type of model that is used from a light model, to a more advanced, often reasoning model. They will offer the option to switch to an option called “reasoning / deep research”. This means the tool will use a model that takes more time and processes a problem step-by-step. This often leads to more detailed information. A downside of deep reasoning models is that it takes more time to perform a task and they also consume a larger amount of energy to run. Moreover, sometimes you can only use deep reasoning models if you use the paid version, or you have a limited number of prompts you can do in a free version. Depending on which task you are performing and how detailed you need the output to be, you can decide to use this feature or not.</p>
+</section>
+</section>
+<section id="how-to-choose-your-ai-tool">
+<h2>How to Choose Your AI Tool<a class="headerlink" href="#how-to-choose-your-ai-tool" title="Link to this heading">#</a></h2>
+<p>Some questions you can ask yourself to decide what type of AI tool you should use are:</p>
+<ul class="simple">
+<li><p>What phase of your literature review are you at and what exact task would you like the tool to do?</p></li>
+<li><p>What type of sources do you need the model to use to complete its task? Academic, general, or your own input?</p></li>
+<li><p>What costs are involved in using the tool and what are you allowed to do in the free version?</p></li>
+<li><p>Do you need deep reasoning features or will general reasoning suffice for your task?</p></li>
+<li><p>Do you want to upload sources to the tool? If so: make sure you are not working with sensitive or copyrighted information.</p></li>
+</ul>
+<p>There are many AI tools out there you could use for your research, this initial introduction gave some examples as a starting point and basic understanding of the different tools. For a more comprehensive list of tools, go to resources like <a href="https://libguides.hkust.edu.hk/AI-tools-literature-review/compare-ai-tools" target="_blank">this guide from Hong Kong University of Science and Technology</a>.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Checklist for Evaluating an AI tool</p>
+<p>To help you evaluate a tool you plan to use for a literature review, it can be helpful to use a checklist (for example <a href="https://www.wur.nl/en/library/researchers/ai-library-tools-and-resources.htm" target="_blank">this list from Wageningen University</a>).</p>
+</div>
+<p>It is important to be transparent about your use of AI throughout your project. Publishers are increasingly asking for statements about the use of AI, and researchers should check the policies of the chosen publication outlet. Be sure to document your use of AI throughout your project. For students at TU Delft this is dependent on the practice at your faculty / program or the instructions you received from your lecturer/supervisor. If you didn’t receive specific instructions, you can use <a href= "https://wur-studentsupport.screenstepslive.com/m/118226/l/1878197-how-to-document-your-genai-use" target=_blank)>this guide from Wageningen University</a> as a format to help document your use of AI.</p>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>General tools</p></th>
+<th class="head"><p>Academic search tools</p></th>
+<th class="head"><p>Local-input tools</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Trained on / search open web</p></td>
+<td><p>Trained on / search academic sources (often from Semantic Scholar)</p></td>
+<td><p>Trained on / search data provided by you</p></td>
+</tr>
+<tr class="row-odd"><td><p>General questions</p></td>
+<td><p>Research questions</p></td>
+<td><p>Specific questions related to specific sources</p></td>
+</tr>
+<tr class="row-even"><td><p>Sources provided sometimes fake</p></td>
+<td><p>Sources provided are real</p></td>
+<td><p>Sources used are real</p></td>
+</tr>
+<tr class="row-odd"><td><p>Examples:<br><br>• Copilot<br>• ChatGPT<br>• Gemini<br>• Perplexity</p></td>
+<td><p>Examples:<br><br>• Elicit<br>• Consensus<br>• Undermind.ai<br>• LitMaps</p></td>
+<td><p>Examples:<br><br>• NotebookLM<br> • ASReview<br>• ChatPDF<br> • Elicit</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><em>AI: Library tools and resources</em>. (2025, March 6). Wageningen University &amp; Research. <a href="https://www.wur.nl/en/library/researchers/ai-library-tools-and-resources.htm" target="_blank">https://www.wur.nl/en/library/researchers/ai-library-tools-and-resources.htm</a></p></li>
+<li><p>Zhao, A. (n.d.). <em>LibGuides: Emerging AI Tools for Literature Review: Overview</em>. Retrieved June 17, 2025, from <a href="https://libguides.hkust.edu.hk/AI-tools-literature-review/overview" target="_blank">https://libguides.hkust.edu.hk/AI-tools-literature-review/overview</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./part2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../part1/evaluating-output.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Summary Part 1: Effective and Responsible GenAI Use</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="defining-topic.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2 Defining Your Topic and Research Questions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-literature-review-process">Introduction to the Literature Review Process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-tools-for-literature-review">Different Tools for Literature Review</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-reasoning-models">Deep Reasoning Models</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-choose-your-ai-tool">How to Choose Your AI Tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Library Education Support & Centre for Languages and Academic Skills
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Delft University of Technology, unless otherwise specified the works in this guide are licensed CC-BY 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

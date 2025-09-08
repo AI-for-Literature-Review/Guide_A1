@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>What is Generative AI? &#8212; AI for Literature Review</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'part1/what-is-genai';</script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Prompt Engineering" href="prompts.html" />
+    <link rel="prev" title="Introduction" href="../about.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../about.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">AI for Literature Review</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">What is GenAI</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">What is Generative AI?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prompts.html">Prompt Engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluating-output.html">Summary Part 1: Effective and Responsible GenAI Use</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AI Tools for Lit Review</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../part2/selecting-ai-tool.html">1 Introduction to AI Tools for Literature Review</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part2/defining-topic.html">2 Defining Your Topic and Research Questions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part2/brainstorming.html">Brainstorming on Your Topic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/exploring-literature.html">Exploring Academic Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/develop-question.html">Developing Your Research Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part2/search-select.html">3 Searching and Selecting Sources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part2/keyword-search.html">Keyword Searching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/find-additional.html">Finding Additional Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/evaluate-selection.html">Evaluating and Selecting Sources</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part2/analyze-literature.html">4 Analysing Selected Sources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part2/analyze-literature-reading-summarising.html">Reading and Summarising Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/analyze-literature-synthesising.html">Synthesising Findings</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part2/write-cite.html">5 Writing Your Text and Citing Sources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part2/draft.html">Drafting Your Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/revising.html">Revising and Editing Your Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/cite-references.html">Citing Sources</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/part1/what-is-genai.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>What is Generative AI?</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generative-ai-explained">Generative AI Explained</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-and-considerations">Limitations and Considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="what-is-generative-ai">
+<h1>What is Generative AI?<a class="headerlink" href="#what-is-generative-ai" title="Link to this heading">#</a></h1>
+<section id="generative-ai-explained">
+<h2>Generative AI Explained<a class="headerlink" href="#generative-ai-explained" title="Link to this heading">#</a></h2>
+<p>Before you learn how you can use GenAI tools to assist you in the literature research and writing process, it is important to have a basic understanding of how GenAI works. GenAI is short for generative artificial intelligence and, to put it very simply, refers to computer systems that execute tasks that are typically performed by humans as they require human intelligence, and by doing so create new content.</p>
+<p>An important principle of GenAI is that it doesn’t understand what it is doing. Rather, it generates information based on input from a user and a set of rules. An explanation that is often used is John Searle’s Chinese Room Experiment. Watch <a href="https://www.youtube.com/watch?v=8NUd1FX9dYs" target="_blank">this video</a> to learn about this thought experiment.</p>
+<p>In this analogy, the question written by the person outside the room is the prompt you write, the room is the GenAI tool you use, the book with instructions are the rules that the tool uses, and the response from the person inside the room is the GenAI output.</p>
+<p>About the rules: a lot of the GenAI tools that are currently thriving make use of Large Language Models (LLMs) that work based on word prediction. Watch the video below to learn more about how LLMs use word prediction to generate output.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eJlyPy_Q0h0?si=EA_-ZyetVWMR1LPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+"How Do Large Language Models Work?" by ILLC Science is licensed CC-BY.<br><br>
+<p>Different GenAI tools make use of different LLMs. For example, ChatGPT as of 2025 uses GPT-5. Since ChatGPT emerged in 2022 other LLMs have emerged, for example Claude-3.5 and Gemini-1.5-Pro.</p>
+<p><img alt="Timeline of GPT-models" src="../_images/part1-timeline-ai-models.png" /><br>
+<a href="https://libguides.hkust.edu.hk/ld.php?content_id=52124893" target="_blank">Timeline of GPT-models</a> by Aster Zhao is licensed CC-BY-NC-SA from Hong Kong University of Science and Technology.</p>
+<p>Tools like Copilot, ChatGPT, Claude and Gemini can be seen as interfaces that use one of these LLMs to perform tasks. There are differences between these tools in what the interface looks like, what LLM the tool uses and what sources it draws from, as well as what you can use it for. Since there are a lot of different GenAI tools with different purposes, it is important to select a GenAI tool that aligns with your goals. In part 2 of this book, you will learn more about the differences between general and academic tools and how you can select the most suitable GenAI tool for specific steps in the research and writing process.</p>
+</section>
+<section id="limitations-and-considerations">
+<h2>Limitations and Considerations<a class="headerlink" href="#limitations-and-considerations" title="Link to this heading">#</a></h2>
+<p>GenAI tools have a great potential, especially because they can perform tasks way faster than humans can. There are however some important limitations that you should be aware of before using GenAI, especially for research purposes.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Hallucinations</label><div class="sd-tab-content docutils">
+<p>As mentioned in the video about the Chinese Room experiment, a GenAI tool doesn’t know what it is doing. It simply follows the rules that it was trained with, but it is unaware of the content it works with. Because of that, a GenAI tool does not necessarily generate content that is true. Some scholars would even go as far as saying that truth in GenAI output is a coincidence: it sometimes happens to generate truthful content. Therefore, you should never take the output for granted. Instead, always critically check the output and compare it with ‘traditional’ sources like scientific journal papers.</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Biases</label><div class="sd-tab-content docutils">
+<p>GenAI tools are trained with real-life data and therefore can reflect and amplify biases from human thinking. For example, research has shown that GenAI tools are often biased against women and people of colour. Other biases, for example confirmation bias (the tendency to search for and favour information that confirms your beliefs), can also affect the data that is used for training the GenAI tool, and therefore also affect the output. So, also from the perspective of potential biases, it is important to always critically check the GenAI output.</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Privacy and copyright</label><div class="sd-tab-content docutils">
+<p>GenAI tools are trained with data that is publicly available. However, the authors of the texts that are used for training purposes did not give permission for this. Although GenAI tools do not typically copy exact passages, they do extract patterns, styles and ideas. This leads to a grey area of potential copyright infringement. In addition, it is often unclear how GenAI tools use the input (prompts) from users. These could also be (and often are) used for training purposes. It is therefore important to never insert personal details or confidential information in GenAI tools.</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Overreliance</label><div class="sd-tab-content docutils">
+<p>Completely outsourcing tasks to GenAI tools is not smart, not only because of the possible inaccuracies and biases in the output, but also because it leads to overreliance on GenAI. Overreliance, in turn, can lead to loss of creativity and critical thinking skills. As you may have noticed yourself, GenAI tools often generate texts with a typical, one could say flavourless, language. Simply copy-pasting GenAI output results in a text with a generic style, while readers want to hear your voice. In addition, when using GenAI tools, your own critical thinking skills are essential to evaluate the output. Because of the problems that overreliance on GenAI tools causes, it is important to use GenAI tools as an assistant, in addition to your own skill set.</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Environment</label><div class="sd-tab-content docutils">
+<p>The environmental impact of GenAI is significant: it uses great amounts of water and energy for running the models (i.e., responding to prompts) and training them. Although this is of course always a personal consideration, you could take this into account when you are considering using GenAI tools.</p>
+</div>
+</div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Bender, E.M., Gebru, T., McMillan-Major, A., &amp; Shmitchell, S. (2021). On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? In M.C. Elish, W. Isaas &amp; R.S. Zemel (Eds.), <em>FAccT ’21: Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, Canada, 3-10 maart 2021</em> (pp. 610-623). ACM. <a href="https://doi.org/10.1145/3442188.3445922" target="_blank">https://doi.org/10.1145/3442188.3445922</a></p></li>
+<li><p>Faruqui, M., Tsvetkov, Y., Rastogi, P., &amp; Dyer, C. (2016). <em>Problems with evaluation of word embeddings using word similarity tasks</em>. arXiv:1605.02276v3. <a href="https://doi.org/10.48550/arXiv.1605.02276" target="_blank">https://doi.org/10.48550/arXiv.1605.02276</a></p></li>
+<li><p>Jacobs, M. (2025). <em>GenAI in Education</em> [Interactive Book]. Retrieved August 19, 2025, from <a href="https://www.genaieducationbook.online/intro.html" target="_blank">https://www.genaieducationbook.online/intro.html</a></p></li>
+<li><p>Kucharavy, A. (2024). Fundamental limitations of generative LLMs. In A. Kucharavy, O. Plancherel, V. Mulder, A. Mermoud &amp; V. Lenders (Eds.), <em>Large Language Models in Cybersecurity: Threats, Exposure and Mitigation</em> (pp. 55-64). Springer.</p></li>
+<li><p>Naznin, K., Al Mahmud, A., Nguyen, M.T., &amp; Chua, C. (2025). ChatGPT integration in higher education for personalized learning, academic writing, and coding tasks: a systematic review. <em>Computers, 14</em>, 53. <a href="https://doi.org/10.3390/computers14020053" target="_blank">https://doi.org/10.3390/computers14020053</a></p></li>
+<li><p>Sun, Y., Sheng, D., Zhou, Z., &amp; Wu, Y. (2024). AI hallucination: towards a comprehensive classification of distorted information in artificial intelligence-generated content. <em>Humanities and Social Sciences Communications, 11</em>, 1278. <a href="https://doi.org/10.1057/s41599-024-03811-x" target="_blank">https://doi.org/10.1057/s41599-024-03811-x</a></p></li>
+<li><p>Wang, C. (2024). Exploring students’ generative AI-assisted writing process: perceptions and experiences from native and nonnative English speakers. <em>Technology, Knowledge and Learning</em>. <a href="https://doi.org/10.1007/s10758-024-09744-3" target="_blank">https://doi.org/10.1007/s10758-024-09744-3</a></p></li>
+<li><p>Wei, X., Kumar, N., &amp; Zhang, H. (2025). Addressing bias in generative AI: challenges and research opportunities in information management. <em>Information &amp; Management, 62</em>(2), 104103. <a href="https://doi.org/10.1016/j.im.2025.104103" target="_blank">https://doi.org/10.1016/j.im.2025.104103</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./part1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../about.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="prompts.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Prompt Engineering</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generative-ai-explained">Generative AI Explained</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-and-considerations">Limitations and Considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Library Education Support & Centre for Languages and Academic Skills
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Delft University of Technology, unless otherwise specified the works in this guide are licensed CC-BY 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
